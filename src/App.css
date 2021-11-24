@@ -36,3 +36,81 @@
     transform: rotate(360deg);
   }
 }
+.logoImage {
+  height: 100px;
+  width: 150px;
+  margin-top: 5px;
+}
+.mainPage {
+  flexDirection: row;
+  flex: 1;
+  background-color: #999999;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  height: 100px;
+}
+.logo {
+
+
+}
+.searchBar {
+  height: 30px;
+  width: 600px;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-right: 550px;
+
+}
+.logIn {
+
+  margin-right: 20px;
+  margin-top: 5px;
+}
+.logInButton {
+  height: 30px;
+}
+.movies{
+  background-color: #888888;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 80vh;
+}
+.moviesRowOne{
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+  background-color: #888888;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.moviesRowTwo{
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+  background-color: #888888;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.movieCard{
+  margin-left: 20px;
+  flex: 1;
+}
+.movieLogo{
+  height: 200px;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.movieTitle{
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 20px;
+  font-family: Bahnschrift;
+  align-content: center;
+  color: orange;
+}
+
