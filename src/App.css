@@ -72,6 +72,7 @@
   height: 30px;
 }
 .movies{
+  border-radius: 20px;
   background-color: #888888;
   margin-top: 20px;
   margin-right: 20px;
@@ -81,7 +82,7 @@
 .moviesRowOne{
   flex-direction: row;
   display: flex;
-  flex: 1;
+  flex: 2;
   background-color: #888888;
   margin-top: 20px;
   margin-right: 20px;
@@ -96,7 +97,12 @@
   margin-left: 20px;
 }
 .movieCard{
-  margin-left: 20px;
+  background-color: #999999;
+  width: 100px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 90px;
+  border-radius: 20px;
   flex: 1;
 }
 .movieLogo{
