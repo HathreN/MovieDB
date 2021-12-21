@@ -37,7 +37,7 @@
   }
 }
 .logoImage {
-  height: 100px;
+  height: 150px;
   width: 150px;
   margin-top: 5px;
 }
@@ -48,29 +48,29 @@
   height: 100vh;
 }
 .header {
-  display: flex;
-  height: 100px;
+  content: "";
+  height: 40vh;
+  width: 100vw;
+  justify-content: center;
 }
-.logo {
-
-
+.headerContent{
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 .searchBar {
   height: 30px;
   width: 600px;
   margin-top: 5px;
-  margin-left: 30px;
-  margin-right: 550px;
+  margin-left: 50px;
 
 }
 .logIn {
-
   margin-right: 20px;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-left: 40px;
 }
-.logInButton {
-  height: 30px;
-}
+
 .movies{
   border-radius: 20px;
   background-color: #888888;
@@ -119,4 +119,41 @@
   align-content: center;
   color: orange;
 }
-
+.loginBackground{
+  background-color: #888888;
+  height: 100vh;
+}
+.loginLogo{
+  height: 200px;
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+.loginContent{
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 10px;
+}
+.signForm{
+  flex: 1;
+  align-content: center;
+  margin-left: 10px;
+}
+.form-control{
+  width: 20vw;
+}
+.movieAddContent{
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 10px;
+}
+.signUp {
+  margin-top: 10px;
+  margin-left: 100px;
+}
+.signUpContent{
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 10px;
+}

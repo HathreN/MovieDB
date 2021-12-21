@@ -1,9 +1,16 @@
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 
 function Movie() {
+
+    const navigate = useNavigate();
+
+    const detailsButton = () => {
+        navigate('/details');
+    };
     const moviesDatabase = [
         {
             "id": 1,
@@ -670,19 +677,19 @@ function Movie() {
             <div id="moviesRowOne" className="moviesRowOne">
                 {moviesDatabase.map((props)=> (
                     props.id < 6 ?
-                        <div className="movieCard">
+                        <touchableopacity className="movieCard" onClick={detailsButton}>
                             <div id="movieLogo" className="movieLogo"><img className="movieLogo" src={props.posterurl} alt="Logo"></img></div>
-                            <div id="movieTitle" className="movieTitle"><text className="movieTitle">{props.title}</text></div>
-                        </div> : false
+                            <div id="movieTitle" className="movieTitle"><text className="movieTitle" >{props.title}</text></div>
+                        </touchableopacity> : false
                 ))}
             </div>
             <div id="moviesRowTwo" className="moviesRowOne">
                 {moviesDatabase.map((props)=> (
                     props.id >= 6  && props.id <= 10 ?
-                        <div className="movieCard">
-                            <div id="movieLogo" className="movieLogo"><img className="movieLogo" src={props.posterurl} alt="Logo"></img></div>
-                            <div id="movieTitle" className="movieTitle"><text className="movieTitle">{props.title}</text></div>
-                        </div> : false
+                        <touchableopacity className="movieCard" onClick={detailsButton}>
+                            <div id="movieLogo" className="movieLogo"><img className="movieLogo" src={props.posterurl} alt="Logo" ></img></div>
+                            <div id="movieTitle" className="movieTitle"><text className="movieTitle" >{props.title}</text></div>
+                        </touchableopacity> : false
                 ))}
             </div>
         </div>
