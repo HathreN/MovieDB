@@ -2,45 +2,57 @@ import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useNavigate} from "react-router-dom";
 import Header from "./header"
+import Footer from "./footer";
+import axios from "axios";
 
 const MovieAddComponent = () => {
-
-    const [nickname, setNickname] = useState('')
-    const [email, setEmail] = useState('')
-    const [name, setName] = useState('')
-    const [surname, setSurname] = useState('')
-    const [password, setPassword] = useState('')
-    const [show, setShow] = useState(false)
-    const [birthdayDay, setBirthdayDay] = useState('01')
-    const [birthdayMonth, setBirthdayMonth] = useState('01')
-    const [birthdayYear, setBirthdayYear] = useState('1988')
-    const [birthday, setBirthday] = useState('01-01-1988')
-
+    const [title, setTitle] = useState('')
+    const [image, setImage] = useState('')
+    const [content, setContent] = useState('')
     const navigate = useNavigate();
-
-    const mainPageButton = () => {
-        navigate('/')
+    const HandleSubmit = (event) => {
+        if(title.length===0 || image.length===0 || content.length===0){
+            event.preventDefault();
+            document.getElementById('titleInput').style.borderColor="red";
+            document.getElementById('titleInput').style.borderStyle="solid";
+            alert('Pola nie mogą być puste')
+        } else {
+            event.preventDefault();
+            axios({
+                method: 'post',
+                url: 'https://pr-movies.herokuapp.com/api/movies',
+                data: {
+                    title: title,
+                    image: image,
+                    content: content,
+                }
+            }).then((response) => {
+                navigate('/');
+            }).catch((error) => {
+                alert("Podany email lub login są już używane!")
+                console.log(error);
+            });
+        };
     };
 
 
     return (
-        <div className="mainPage">
+        <div id="movieAddPage">
             <div>
                 <Header/>
                 <div className="movieAddContent">
 
-                    <div className="addMovieInfo">
-                        Cieszymy się że chcesz dodać film na naszej stronie. Podążaj za instrukcjami, a na pewno się uda :)
-                    </div>
                     <div id="signForm">
-                        <form id="formSign">
-                            <input className="form-control" placeholder="Podaj tytuł"/><br/>
-                            <input className="form-control" placeholder="Podaj rok powstania filmu" /><br/>
-                            <input className="form-control" placeholder="Podaj gatunek filmu" /><br/>
-                            <input className="form-control" placeholder="Podaj fabułę filmu" /><br/>
-                            <input className="form-control" placeholder="Podaj link do plakatu, np https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2Mjc2NzYxNl5BMl5BanBnXkFtZTgwMTA2OTA1NDM@._V1_SY500_CR0,0,320,500_AL_.jpg"/><br/>
-
-                            <button className="btn btn-primary" id="createAccountButton">
+                        <form id="formSign" onSubmit={HandleSubmit}>
+                            <input className="form-control"  id="titleInput"
+                                   style={{marginTop: '30px', width: '1100px', marginLeft: '20px'}}
+                                   placeholder="Podaj tytuł" onChange={e => setTitle(e.target.value)}/><br/>
+                            <input className="form-control" style={{width: '1100px', marginLeft: '20px'}} id="contentInput"
+                                   placeholder="Podaj fabułę filmu" onChange={e => setContent(e.target.value)}/><br/>
+                            <input className="form-control" style={{width: '1100px', marginLeft: '20px'}} id="imageInput"
+                                   placeholder="Podaj link do plakatu, np https://fwcdn.pl/fpo/58/95/545895/7990124.6.jpg"
+                                   onChange={e => setImage(e.target.value)}/><br/>
+                            <button id="headerButton" type="submit">
                                 Dodaj film!
                             </button>
                         </form>
@@ -48,7 +60,11 @@ const MovieAddComponent = () => {
 
                 </div>
             </div>
+            <div id="footer">
+                <Footer/>
+            </div>
         </div>
+
     )
 };
 

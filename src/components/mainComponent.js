@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from "./header";
 import Movie from "./movie";
+import Footer from "./footer";
 
 const MainComponent = () => {
 
@@ -10,6 +11,7 @@ const MainComponent = () => {
         <div id="mainPage" className="mainPage">
             <Header/>
             <Movie/>
+            <Footer/>
         </div>
     );
 }

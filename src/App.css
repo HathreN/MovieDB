@@ -42,15 +42,12 @@
   margin-top: 5px;
 }
 .mainPage {
-  flexDirection: row;
-  flex: 1;
-  background-color: #999999;
-  height: 100vh;
+  background-color: black;
 }
 .header {
   content: "";
-  height: 40vh;
-  width: 100vw;
+  height: 20vh;
+  width: 90vw;
   justify-content: center;
 }
 .headerContent{
@@ -59,49 +56,133 @@
   justify-content: center;
 }
 .searchBar {
-  height: 30px;
-  width: 600px;
+  height: 40px;
+  width: 620px;
   margin-top: 5px;
   margin-left: 50px;
 
+}
+.searchBarContent{
+  border-style: solid;
+  height: 40px;
+  width: 400px;
+  margin-right: 20px;
+  margin-top: 5px;
+  border-color: #b34b17;
+  border-radius: 10px;
+}
+#searchMovie{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: orange;
+  background-color: #282c34;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #b34b17;
+  margin-bottom: 100px;
+  height: 60px;
+}
+#headerButton{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: orange;
+  margin-top: 7px;
+  background-color: #282c34;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #b34b17;
+  margin-bottom: 100px;
+  height: 60px;
+}
+#searchBarButton{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: orange;
+  background-color: #282c34;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #b34b17;
+  margin-bottom: 100px;
+  height: 60px;
+}
+#logInButton{
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: orange;
+  margin-right: 20px;
+  background-color: #282c34;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #b34b17;
+  margin-bottom: 100px;
+  height: 60px;
 }
 .logIn {
   margin-right: 20px;
   margin-top: 10px;
   margin-left: 40px;
+  height: 100px;
 }
 
 .movies{
   border-radius: 20px;
-  background-color: #888888;
-  margin-top: 20px;
+  border-color: #282c34;
+  border-style: solid;
+  background-color: #b34b17;
   margin-right: 20px;
   margin-left: 20px;
-  height: 80vh;
 }
 .moviesRowOne{
-  flex-direction: row;
   display: flex;
-  flex: 2;
-  background-color: #888888;
-  margin-top: 20px;
-  margin-right: 20px;
+  flex-wrap: wrap;
+  background-color: #b34b17;
+  margin-bottom: 20px;
   margin-left: 20px;
 }
-.moviesRowTwo{
-  flex-direction: row;
+#topMoviesRow{
   display: flex;
-  flex: 1;
-  background-color: #888888;
+  flex-wrap: wrap;
+  background-color: #b34b17;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+#topMovies{
+  border-radius: 20px;
+  border-color: #282c34;
+  border-style: solid;
+  background-color: #b34b17;
   margin-right: 20px;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 .movieCard{
-  background-color: #999999;
-  width: 100px;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 90px;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #282c34;
+  margin-top: 15px;
+  margin-right: 15px;
   border-radius: 20px;
   flex: 1;
 }
@@ -110,8 +191,44 @@
   width: 150px;
   margin-top: 10px;
   margin-left: 5px;
+  margin-right: 5px;
 }
 .movieTitle{
+  font-size: 20px;
+  margin-top: 10px;
+  font-family: Bahnschrift;
+  align-content: center;
+  color: orange;
+}
+.movieContent{
+  margin-left: 5px;
+  font-size: 20px;
+  margin-top: 10%;
+  font-family: Bahnschrift;
+  align-content: center;
+  color: orange;
+}
+#footer{
+  margin-top: 70px;
+  height: 50px;
+}
+#movieDetailFooter{
+}
+.movieDetailTitle{
+  margin-top: 100px;
+  margin-left: 5px;
+  font-size: 20px;
+  font-family: Bahnschrift;
+  align-content: center;
+  color: orange;
+}
+.movieDetailLogo{
+  height: 350px;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.movieDetailDescription{
   margin-top: 10px;
   margin-left: 5px;
   font-size: 20px;
@@ -119,8 +236,19 @@
   align-content: center;
   color: orange;
 }
+.movieDetailContent{
+  border-radius: 20px;
+  background-color: #282c34;
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 65vh;
+}
+.movieDetailsPage{
+  background-color: black;
+  height: 105vh;
+}
 .loginBackground{
-  background-color: #888888;
+  background-color: black;
   height: 100vh;
 }
 .loginLogo{
@@ -134,26 +262,42 @@
   margin-left: 20%;
   margin-right: 20%;
   padding-bottom: 10px;
+  border-style: solid;
+  border-radius: 50px;
+  background-color: #b34b17;
 }
 .signForm{
   flex: 1;
   align-content: center;
   margin-left: 10px;
 }
+
 .form-control{
   width: 20vw;
 }
 .movieAddContent{
   margin-left: 20%;
   margin-right: 20%;
+  margin-top: 10%;
+  background-color: #b34b17;
   padding-bottom: 10px;
+  border-style: solid;
+  border-radius: 50px;
+}
+#movieAddPage{
+  height: 100vh;
+  background-color: black;
 }
 .signUp {
   margin-top: 10px;
   margin-left: 100px;
+  height: 30px;
 }
 .signUpContent{
   margin-left: 20%;
   margin-right: 20%;
   padding-bottom: 10px;
+  border-style: solid;
+  border-radius: 50px;
+  background-color: #b34b17;
 }
